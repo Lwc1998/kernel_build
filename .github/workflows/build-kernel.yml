@@ -42,7 +42,7 @@ jobs:
                                   CROSS_COMPILE=$GITHUB_WORKSPACE/aarch64-linux-android-4.9/bin/aarch64-linux-android- \
                                   CROSS_COMPILE_ARM32=$GITHUB_WORKSPACE/arm-linux-androideabi-4.9/bin/arm-linux-androideabi- "
           cd kernel-source
-          curl -LSs "https://github.com/Lwc1998/InfiniR_kernel_alioth" | bash -
+          curl -LSs "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/tree/elish-r-oss" | bash -
           make ${args} 
           ${{ env.KERNEL_TARGET }}_defconfig
           make -j$(($(getconf _NPROCESSORS_ONLN) * 2)) ${args}
